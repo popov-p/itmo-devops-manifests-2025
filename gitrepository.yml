@@ -10,3 +10,4 @@ spec:
     branch: master
   secretRef:
     name: flux-git-ssh
+    namespace: flux-system
