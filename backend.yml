@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: pavel5926/devel-backend:build-84
+          image: pavel5926/devel-backend:1.0.90
           ports:
             - containerPort: 8070
               protocol: TCP
