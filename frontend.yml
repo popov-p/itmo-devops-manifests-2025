@@ -14,7 +14,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: pavel5926/devel-frontend:{{ .Object.status.latestImage }}
+      - image: pavel5926/devel-frontend:1.0.90
         name: frontend
         ports:
           - containerPort: 5173
