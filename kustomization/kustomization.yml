@@ -5,4 +5,4 @@ resources:
 images:
   - name: pavel5926/devel-frontend
     newName: pavel5926/devel-frontend  # {"$imagepolicy": "flux-system:frontend-policy:name"}
-    newTag: 1.0.90                       # {"$imagepolicy": "flux-system:frontend-policy:tag"}
+    newTag: 1.0.90                     # {"$imagepolicy": "flux-system:frontend-policy:tag"}
