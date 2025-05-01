@@ -17,10 +17,9 @@ spec:
         name: Flux Bot
         email: flux@example.com
       messageTemplate: |
-        messageTemplate: |
         Automated image update: {{ range $resource, $changes := .Changed.Objects }}
           {{- range $_, $change := $changes }}
-            Updated image: {{ $change.NewValue }}
+            Tag: {{ $change.NewValue | split ":" | last }}
           {{- end }}
         {{- end }}
 
