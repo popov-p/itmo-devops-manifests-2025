@@ -6,3 +6,5 @@ metadata:
 spec:
   image: pavel5926/devel-frontend
   interval: 10s
+  secretRef:
+  name: docker-hub-secret
