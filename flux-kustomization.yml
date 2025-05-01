@@ -11,5 +11,4 @@ spec:
     kind: GitRepository
     name: itmo-devops-manifests-2025
   targetNamespace: default
-  prune: true
   timeout: 2m
