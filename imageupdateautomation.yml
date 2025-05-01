@@ -16,7 +16,12 @@ spec:
       author:
         name: Flux Bot
         email: flux@example.com
-      messageTemplate: "Automated: Update image to {{ .Object.metadata.name }}:{{ .Object.status.latestImage }}"
+      messageTemplate: |
+        Automated image update:
+        {{- range .Updated.Images }}
+        - {{ .Ref }} → {{ .Policy.Tag }}
+        {{- end }}
+
     push:
       branch: master
   update:
