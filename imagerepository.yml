@@ -8,3 +8,16 @@ spec:
   interval: 10s
   secretRef:
     name: docker-hub-secret
+
+---
+
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: backend-repository
+  namespace: flux-system
+spec:
+  image: pavel5926/devel-backend
+  interval: 10s
+  secretRef:
+    name: docker-hub-secret

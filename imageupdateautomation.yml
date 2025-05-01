@@ -19,10 +19,41 @@ spec:
       messageTemplate: |
         Automated image update: {{ range $resource, $changes := .Changed.Objects }}
           {{- range $_, $change := $changes }}
-            Updated image: {{ $change.NewValue }}
+            Updated image devel-frontend to version: {{ $change.NewValue }}
           {{- end }}
         {{- end }}
+    push:
+      branch: master
+  update:
+    path: "./"
+    strategy: Setters
 
+--- 
+
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: backend-automation
+  namespace: flux-system
+spec:
+  interval: 10s
+  sourceRef:
+    kind: GitRepository
+    name: itmo-devops-manifests-2025
+  git:
+    checkout:
+      ref:
+        branch: master
+    commit:
+      author:
+        name: Flux Bot
+        email: flux@example.com
+      messageTemplate: |
+        Automated image update: {{ range $resource, $changes := .Changed.Objects }}
+          {{- range $_, $change := $changes }}
+            Updated image devel-backend to version: {{ $change.NewValue }}
+          {{- end }}
+        {{- end }}
     push:
       branch: master
   update:
