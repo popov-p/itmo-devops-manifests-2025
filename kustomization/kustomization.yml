@@ -4,5 +4,10 @@ resources:
   - frontend.yml
 images:
   - name: pavel5926/devel-frontend
+<<<<<<< HEAD
     newName: pavel5926/devel-frontend  # {"$imagepolicy": "flux-system:frontend-policy:name"}
     newTag: 1.0.90                     # {"$imagepolicy": "flux-system:frontend-policy:tag"}
+=======
+    newName: pavel5926/devel-frontend # {"$imagepolicy": "flux-system:frontend-policy:name"}
+    newTag: 1.0.91 # {"$imagepolicy": "flux-system:frontend-policy:tag"}
+>>>>>>> a99795c2512575af047ca275a3891328de28f39d
