@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment 
+kind: Deployment
 metadata:
   name: frontend
 spec:
@@ -14,18 +14,18 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: pavel5926/devel-frontend:1.0.90 # {"$imagepolicy": "flux-system:frontend-policy:name"}
+      - image: pavel5926/devel-frontend # {"$imagepolicy": "flux-system:frontend-policy:name"}
         name: frontend
         ports:
-          - containerPort: 5173
-            protocol: TCP
+        - containerPort: 5173
+          protocol: TCP
         env:
-          - name: VITE_HOST
-            value: "0.0.0.0"
-          - name: VITE_HMR_HOST
-            value: "192.168.59.112"
-          - name: VITE_API_BASE_HOST
-            value: "192.168.59.112"
+        - name: VITE_HOST
+          value: "0.0.0.0"
+        - name: VITE_HMR_HOST
+          value: "192.168.59.112"
+        - name: VITE_API_BASE_HOST
+          value: "192.168.59.112"
         imagePullPolicy: Always
 ---
 apiVersion: v1
