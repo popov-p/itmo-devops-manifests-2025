@@ -9,4 +9,4 @@ images:
     newTag: 1.0.102 # {"$imagepolicy": "flux-system:frontend-policy:tag"}
   - name: pavel5926/devel-backend
     newName: pavel5926/devel-backend # {"$imagepolicy": "flux-system:backend-policy:name"}
-    newTag: 1.0.101 # {"$imagepolicy": "flux-system:backend-policy:tag"}
+    newTag: 1.0.102 # {"$imagepolicy": "flux-system:backend-policy:tag"}
