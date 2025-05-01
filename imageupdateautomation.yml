@@ -19,7 +19,7 @@ spec:
       messageTemplate: |
         Automated image update: {{ range $resource, $changes := .Changed.Objects }}
           {{- range $_, $change := $changes }}
-            Tag: {{ $change.NewValue | split ":" | last }}
+            Updated image: {{ $change.NewValue }}
           {{- end }}
         {{- end }}
 
