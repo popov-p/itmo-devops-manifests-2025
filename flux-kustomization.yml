@@ -10,5 +10,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: itmo-devops-manifests-2025
-  targetNamespace: flux-system
+  targetNamespace: default
   timeout: 2m
