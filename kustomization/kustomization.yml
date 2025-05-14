@@ -6,7 +6,7 @@ resources:
 images:
   - name: pavel5926/devel-frontend
     newName: pavel5926/devel-frontend # {"$imagepolicy": "flux-system:frontend-policy:name"}
-    newTag: 1.0.99 # {"$imagepolicy": "flux-system:frontend-policy:tag"}
+    newTag: 1.0.97 # {"$imagepolicy": "flux-system:frontend-policy:tag"}
   - name: pavel5926/devel-backend
     newName: pavel5926/devel-backend # {"$imagepolicy": "flux-system:backend-policy:name"}
     newTag: 1.0.101 # {"$imagepolicy": "flux-system:backend-policy:tag"}
